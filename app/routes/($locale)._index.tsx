@@ -58,7 +58,7 @@ function loadDeferredData({context}: LoaderFunctionArgs) {
 export default function Homepage() {
   const data = useLoaderData<typeof loader>();
   return (
-    <div className="home">
+    <div className="home bg-primary">
       <FeaturedCollection collection={data.featuredCollection} />
       <RecommendedProducts products={data.recommendedProducts} />
     </div>
@@ -94,7 +94,7 @@ function RecommendedProducts({
 }) {
   return (
     <div className="recommended-products">
-      <h2>Recommended Products</h2>
+      <h2 className='display-1'>Recommended Products</h2>
       <Suspense fallback={<div>Loading...</div>}>
         <Await resolve={products}>
           {(response) => (
@@ -116,6 +116,7 @@ function RecommendedProducts({
                         <Money data={product.priceRange.minVariantPrice} />
                       </small>
                     </Link>
+                    
                   ))
                 : null}
             </div>

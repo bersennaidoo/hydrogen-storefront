@@ -15,6 +15,7 @@ import favicon from '~/assets/favicon.svg';
 import resetStyles from '~/styles/reset.css?url';
 import appStyles from '~/styles/app.css?url';
 import tailwindCss from './styles/tailwind.css?url';
+import bootstrapCss from './styles/bootstrap-custom.css?url';
 import {PageLayout} from '~/components/PageLayout';
 import {FOOTER_QUERY, HEADER_QUERY} from '~/lib/fragments';
 
@@ -150,6 +151,7 @@ export function Layout({children}: {children?: React.ReactNode}) {
         <link rel="stylesheet" href={tailwindCss}></link>
         <link rel="stylesheet" href={resetStyles}></link>
         <link rel="stylesheet" href={appStyles}></link>
+        <link rel="stylesheet" href={bootstrapCss}></link>
         <Meta />
         <Links />
       </head>

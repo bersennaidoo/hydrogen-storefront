@@ -10,7 +10,8 @@
     "preview": "shopify hydrogen preview --build",
     "lint": "eslint --no-error-on-unmatched-pattern --ext .js,.ts,.jsx,.tsx .",
     "typecheck": "tsc --noEmit",
-    "codegen": "shopify hydrogen codegen"
+    "codegen": "shopify hydrogen codegen",
+    "sass": "sass --watch app/:app/"
   },
   "prettier": "@shopify/prettier-config",
   "dependencies": {
@@ -22,7 +23,8 @@
     "graphql-tag": "^2.12.6",
     "isbot": "^3.8.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sass": "^1.84.0"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.2",
