@@ -5,9 +5,9 @@
   "version": "2025.1.0",
   "type": "module",
   "scripts": {
-    "build": "shopify hydrogen build --codegen",
+    "build": "remix vite:build",
     "dev": "shopify hydrogen dev --codegen",
-    "preview": "shopify hydrogen preview --build",
+    "preview": "netlify serve",
     "lint": "eslint --no-error-on-unmatched-pattern --ext .js,.ts,.jsx,.tsx .",
     "typecheck": "tsc --noEmit",
     "codegen": "shopify hydrogen codegen",
@@ -15,6 +15,9 @@
   },
   "prettier": "@shopify/prettier-config",
   "dependencies": {
+    "@netlify/edge-functions": "^2.11.1",
+    "@netlify/remix-edge-adapter": "^3.4.2",
+    "@netlify/remix-runtime": "^2.3.1",
     "@remix-run/react": "^2.15.2",
     "@remix-run/server-runtime": "^2.15.2",
     "@shopify/hydrogen": "2025.1.0",
